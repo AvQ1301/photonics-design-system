@@ -1,0 +1,47 @@
+/* Photonics Design System tokens. Values match tokens.json. */
+:root {
+  --pds-white: #FFFFFF;
+  --pds-ink: #171B1F;
+  --pds-slate: #515A61;
+  --pds-stone: #B5B4B4;
+  --pds-mist: #D7D9DA;
+  --pds-panel: #F3F4F4;
+  --pds-red: #DF3621;
+  --pds-brick: #AC2818;
+  --pds-hot: #EE0033;
+
+  --pds-font-sans: "FS PF BeauSans Pro", "Fira Sans", Arial, sans-serif;
+  --pds-font-numeral: "FS Magistral", "Exo 2", Arial, sans-serif;
+
+  /* Sizes are px on the 1920 x 1080 canvas. */
+  --pds-size-cover: 64px;
+  --pds-size-title: 60px;
+  --pds-size-stat: 54px;
+  --pds-size-numeral: 40px;
+  --pds-size-heading: 38px;
+  --pds-size-body: 30px;
+  --pds-size-caption: 24px;
+
+  --pds-line-cover: 90px;
+  --pds-line-title: 84px;
+  --pds-line-stat: 76px;
+  --pds-line-numeral: 56px;
+  --pds-line-heading: 53px;
+  --pds-line-body: 45px;
+  --pds-line-caption: 36px;
+
+  --pds-tracking-cover: -1.28px;
+  --pds-tracking-title: -1.2px;
+  --pds-tracking-heading: -0.37px;
+  --pds-tracking-eyebrow: 1.92px;
+
+  --pds-margin: 48px;
+  --pds-content-top: 181px;
+  --pds-rule-width: 288px;
+  --pds-rule-height: 12px;
+  --pds-edge-height: 8px;
+  --pds-hairline: 2px;
+  --pds-step-size: 80px;
+  --pds-footer-height: 48px;
+  --pds-tab-width: 264px;
+}

@@ -1,0 +1,8 @@
+# Licensed fonts must not be committed.
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+.DS_Store
+~$*.pptx

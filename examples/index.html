@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photonics Design System</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Exo+2:ital,wght@1,700&display=swap">
+<link rel="stylesheet" href="../tokens/tokens.css">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--pds-mist); color: var(--pds-ink); font-family: var(--pds-font-sans); padding: 24px; }
+  .slide { position: relative; width: min(100%, 1200px); aspect-ratio: 16 / 9; margin: 0 auto 24px; background: var(--pds-white); overflow: hidden; container-type: inline-size; }
+  /* 1cqw is 19.2px on the 1920 canvas. */
+  .inner { position: absolute; inset: 9.43cqw 2.5cqw 4cqw 2.5cqw; }
+  h1 { position: absolute; left: 2.5cqw; top: 1.3cqw; font-size: 3.125cqw; line-height: 4.375cqw; letter-spacing: -.0625cqw; }
+  .rule { position: absolute; left: 2.5cqw; top: 6.09cqw; width: 15cqw; height: .625cqw; background: var(--pds-red); }
+  .band { position: absolute; left: 0; right: 0; bottom: 0; height: 2.5cqw; background: var(--pds-stone); }
+  .tab { position: absolute; right: 0; bottom: 0; width: 13.75cqw; height: 2.5cqw; padding-right: 1.09cqw; border-radius: .4cqw; background: var(--pds-hot); color: var(--pds-white); font-size: 1.56cqw; font-weight: 700; line-height: 2.5cqw; text-align: right; }
+  .swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2cqw; }
+  .swatch { display: flex; align-items: center; gap: 1cqw; font-size: 1.25cqw; }
+  .chip { width: 5cqw; height: 3cqw; border: 1px solid var(--pds-mist); }
+  .swatch small { display: block; color: var(--pds-slate); font-size: 1.25cqw; }
+  .row { display: grid; grid-template-columns: 30% 1fr; align-items: center; padding: .6cqw 0; border-bottom: 2px solid var(--pds-mist); }
+  .row span { color: var(--pds-slate); font-size: 1.25cqw; }
+  .eyebrow { color: var(--pds-brick); font-size: 1.25cqw; font-weight: 700; letter-spacing: .1cqw; text-transform: uppercase; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3cqw; height: 100%; }
+  .step { display: flex; align-items: center; gap: 1.25cqw; margin-bottom: 1.5cqw; }
+  .num { flex: none; width: 4.17cqw; height: 4.17cqw; border-radius: 50%; background: var(--pds-red); color: var(--pds-white); font: italic 700 2.08cqw/4.17cqw var(--pds-font-numeral); text-align: center; }
+  .step b { display: block; font-size: 1.98cqw; font-weight: 400; }
+  .step span { font-size: 1.25cqw; }
+  .callout { padding: 1.6cqw; background: var(--pds-panel); border-top: .42cqw solid var(--pds-red); }
+  .callout p { margin-top: .8cqw; font-size: 1.56cqw; line-height: 2.34cqw; }
+  table { width: 100%; margin-bottom: 1.5cqw; border-collapse: collapse; font-size: 1.25cqw; }
+  th, td { padding: .8cqw 1.25cqw; border-bottom: 2px solid var(--pds-mist); text-align: left; }
+  th { background: var(--pds-panel); }
+  a { color: var(--pds-brick); }
+</style>
+</head>
+<body>
+<section class="slide">
+  <h1>Color</h1><div class="rule"></div>
+  <div class="inner swatches">
+    <div class="swatch"><i class="chip" style="background:var(--pds-white)"></i><div>White<small>#FFFFFF</small></div></div>
+    <div class="swatch"><i class="chip" style="background:var(--pds-ink)"></i><div>Ink<small>#171B1F</small></div></div>
+    <div class="swatch"><i class="chip" style="background:var(--pds-slate)"></i><div>Slate<small>#515A61</small></div></div>
+    <div class="swatch"><i class="chip" style="background:var(--pds-stone)"></i><div>Stone<small>#B5B4B4</small></div></div>
+    <div class="swatch"><i class="chip" style="background:var(--pds-mist)"></i><div>Mist<small>#D7D9DA</small></div></div>
+    <div class="swatch"><i class="chip" style="background:var(--pds-panel)"></i><div>Panel<small>#F3F4F4</small></div></div>
+    <div class="swatch"><i class="chip" style="background:var(--pds-red)"></i><div>Red<small>#DF3621</small></div></div>
+    <div class="swatch"><i class="chip" style="background:var(--pds-brick)"></i><div>Brick<small>#AC2818</small></div></div>
+    <div class="swatch"><i class="chip" style="background:var(--pds-hot)"></i><div>Hot<small>#EE0033</small></div></div>
+  </div>
+  <div class="band"></div><div class="tab">1</div>
+</section>
+<section class="slide">
+  <h1>Type</h1><div class="rule"></div>
+  <div class="inner">
+    <div class="row"><span>Cover · 64px Bold</span><div style="font-size:3.33cqw;font-weight:700">Presentation Title</div></div>
+    <div class="row"><span>Title · 60px Bold</span><div style="font-size:3.125cqw;font-weight:700">Slide Title</div></div>
+    <div class="row"><span>Heading · 38px Bold</span><div style="font-size:1.98cqw;font-weight:700">Block Heading</div></div>
+    <div class="row"><span>Body · 30px Regular</span><div style="font-size:1.56cqw">Short supporting text.</div></div>
+    <div class="row"><span>Caption · 24px Regular</span><div style="font-size:1.25cqw">Note or description.</div></div>
+    <div class="row"><span>Eyebrow · 24px Bold caps</span><div class="eyebrow">Panel label</div></div>
+  </div>
+  <div class="band"></div><div class="tab">2</div>
+</section>
+<section class="slide">
+  <h1>Components</h1><div class="rule"></div>
+  <div class="inner cols">
+    <div>
+      <div class="step"><div class="num">1</div><div><b>First step</b><span>One short line of context.</span></div></div>
+      <div class="step"><div class="num">2</div><div><b>Second step</b><span>One short line of context.</span></div></div>
+      <div class="step"><div class="num">3</div><div><b>Third step</b><span>One short line of context.</span></div></div>
+    </div>
+    <div>
+      <table>
+        <tr><th>Label</th><th>Detail</th></tr>
+        <tr><td><b>Row one</b></td><td>Short description</td></tr>
+        <tr><td><b>Row two</b></td><td>Short description</td></tr>
+      </table>
+      <div class="callout"><div class="eyebrow">Panel label</div><p>Short callout text. <a href="#">Macenski et al. (2020)</a></p></div>
+    </div>
+  </div>
+  <div class="band"></div><div class="tab">3</div>
+</section>
+</body>
+</html>
